@@ -1,0 +1,18 @@
+<div class="container red-color">
+       
+    <div class="col">
+        <h1>Angular Five</h1>
+    </div>
+   
+    <form>
+        <input type="text" class="input-field" name="txt" value="{{inputs}}" [(ngModel)] = "newText">
+        <input type="submit" [value] = "btn" (click)= "addText()">
+    </form>
+    <div class="col-text">
+        <p class="list" *ngFor="let g of goal; let i = index" (click) = "removeItem(i)">These are added lists:
+            {{g}}
+        </p>
+           <p class="total">Total: {{itemCount}}</p>
+    </div>
+
+</div>
